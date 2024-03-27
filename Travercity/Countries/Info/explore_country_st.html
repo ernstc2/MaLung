@@ -1,0 +1,104 @@
+<script>
+    let map;
+
+    function initMap() {
+        const lati = 13.9094;
+        const longi = -60.9789;
+        const mapOptions = {
+            center: { lat: lati, lng: longi },
+            zoom: 5,
+        };
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+
+    function goToLocation(latitude, longitude) {
+        const newCenter = new google.maps.LatLng(latitude, longitude);
+        map.setCenter(newCenter);
+        map.setZoom(15);
+    }
+
+    window.onload = initMap;
+    
+    function handleClick(element, lat, lng) {
+    document.querySelectorAll('.locations img').forEach(img => {
+        img.classList.remove('clicked');
+    });
+
+    element.classList.add('clicked');
+
+    goToLocation(lat, lng);
+}
+
+function goToLocation(latitude, longitude) {
+    const newCenter = new google.maps.LatLng(latitude, longitude);
+    map.setCenter(newCenter);
+    map.setZoom(15);
+}
+
+
+
+    
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+
+<section class="InformationBox">
+    <h2>About St.Lucia</h2>
+    <p><strong> Enchanting St. Lucia:</strong></p>
+    <p>
+        St. Lucia, a gem in the Caribbean, entices with its lush rainforests,
+         stunning Pitons, soothing hot springs, and idyllic beaches. A perfect 
+         blend of adventure and serenity, it's an ideal destination for both 
+         nature lovers and those seeking relaxation.
+    </p>
+    <div class="container">
+        <div id="map"></div>
+        <div class="locations">
+            <img src="Info/img/The_Pitons.jpg" alt="The Pitons" onclick="goToLocation(13.8000, -61.1667)">
+            <img src="Info/img/Sulphur_Springs_Park.jpg" alt="Sulphur Springs Park" onclick="goToLocation(13.8393, -61.0446)">
+            <img src="Info/img/Marigot_Bay.jpg" alt="Marigot Bay" onclick="goToLocation(13.9644, -61.0252)
+            ">
+        </div>
+        
+
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #map {
+        height: 600px;
+        width: 70%;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+
+    .locations img {
+        width: 60%;  
+        height: 30%; 
+        object-fit: cover; 
+        object-position: center; 
+        cursor: pointer;
+        transition: transform 0.2s ease; 
+        margin-left: 14%;
+    }
+
+    .locations img:active {
+        transform: scale(0.90); 
+    }
+
+
+
+
+</style>

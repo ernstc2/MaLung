@@ -1,0 +1,103 @@
+<script>
+    let map;
+
+    function initMap() {
+        const lati = 51.1657;
+        const longi = 10.4515;
+        const mapOptions = {
+            center: { lat: lati, lng: longi },
+            zoom: 5,
+        };
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+
+    function goToLocation(latitude, longitude) {
+        const newCenter = new google.maps.LatLng(latitude, longitude);
+        map.setCenter(newCenter);
+        map.setZoom(15);
+    }
+
+    window.onload = initMap;
+    
+    function handleClick(element, lat, lng) {
+    document.querySelectorAll('.locations img').forEach(img => {
+        img.classList.remove('clicked');
+    });
+
+    element.classList.add('clicked');
+
+    goToLocation(lat, lng);
+}
+
+function goToLocation(latitude, longitude) {
+    const newCenter = new google.maps.LatLng(latitude, longitude);
+    map.setCenter(newCenter);
+    map.setZoom(15);
+}
+
+
+
+    
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+
+<section class="InformationBox">
+    <h2>About Germany</h2>
+    <p><strong> Experience Germany: A Blend of Historic Splendor and Modern Innovation</strong></p>
+    <p>
+        Germany, a land rich in history and culture, is home to iconic
+         landmarks like the Brandenburg Gate, the fairytale Neuschwanstein 
+         Castle, and the majestic Cologne Cathedral. It's a journey through
+          time and modernity.
+    </p>
+    <div class="container">
+        <div id="map"></div>
+        <div class="locations">
+            <img src="Info/img/Brandenburg_Gate.jpg" alt="Brandenburg Gate" onclick="goToLocation(52.5163, 13.3777)">
+            <img src="Info/img/Neuschwanstein_Castle.jpg" alt="Neuschwanstein Castle" onclick="goToLocation(47.5576, 10.7498)">
+            <img src="Info/img/Cologne_Cathedral.jpg" alt="Cologne Cathedral" onclick="goToLocation(50.9413, 6.9583)">
+        </div>
+        
+
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #map {
+        height: 600px;
+        width: 70%;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+
+    .locations img {
+        width: 60%;  
+        height: 30%; 
+        object-fit: cover; 
+        object-position: center; 
+        cursor: pointer;
+        transition: transform 0.2s ease; 
+        margin-left: 14%;
+    }
+
+    .locations img:active {
+        transform: scale(0.90); 
+    }
+
+
+
+
+</style>

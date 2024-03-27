@@ -1,0 +1,108 @@
+<script>
+    let map;
+
+    function initMap() {
+        const lati = 46.2276;
+        const longi = 2.2137;
+        const mapOptions = {
+            center: { lat: lati, lng: longi },
+            zoom: 5,
+        };
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+
+    function goToLocation(latitude, longitude) {
+        const newCenter = new google.maps.LatLng(latitude, longitude);
+        map.setCenter(newCenter);
+        map.setZoom(15);
+    }
+
+    window.onload = initMap;
+    
+    function handleClick(element, lat, lng) {
+    document.querySelectorAll('.locations img').forEach(img => {
+        img.classList.remove('clicked');
+    });
+
+    element.classList.add('clicked');
+
+    goToLocation(lat, lng);
+}
+
+function goToLocation(latitude, longitude) {
+    const newCenter = new google.maps.LatLng(latitude, longitude);
+    map.setCenter(newCenter);
+    map.setZoom(15);
+}
+
+
+
+    
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+
+<section class="InformationBox">
+    <h2>About France</h2>
+    <p><strong>Captivating France: A Symphony of Culture, Cuisine, and Scenery</strong></p>
+    <p>
+        France, stands as a 
+        global beacon of art, culture, and gastronomy. The capital,
+         Paris, known as the "City of Light," is famed for its romantic
+          avenues, impressionist art, and the iconic Eiffel Tower.
+           The geographical variety of France extends from the
+            sun-kissed beaches of the French Riviera to the snowy
+             peaks of the Alps, and to the lush vineyards of regions 
+             like Bordeaux and Burgundy, offering a kaleidoscope of
+              experiences to visitors.
+    </p>
+    <div class="container">
+        <div id="map"></div>
+        <div class="locations">
+            <img src="Info/img/Eiffel_tower.jpg" alt="Eiffel Tower" onclick="goToLocation(48.8584, 2.2945)">
+            <img src="Info/img/Arc de Triomphe.jpg" alt="Arc de Triomphe" onclick="goToLocation(48.8738, 2.2950)">
+            <img src="Info/img/Louvre.jpg" alt="Louvre" onclick="goToLocation(48.8606, 2.3376)">
+        </div>
+        
+
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #map {
+        height: 600px;
+        width: 70%;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+
+    .locations img {
+        width: 60%;  
+        height: 30%; 
+        object-fit: cover; 
+        object-position: center; 
+        cursor: pointer;
+        transition: transform 0.2s ease; 
+        margin-left: 14%;
+    }
+
+    .locations img:active {
+        transform: scale(0.90); 
+    }
+
+
+
+
+</style>

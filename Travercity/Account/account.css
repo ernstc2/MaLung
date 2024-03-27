@@ -1,0 +1,220 @@
+main {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+
+/* Sidebar */
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgb(243, 230, 230);
+  min-width: max-content;
+}
+
+.sidebarOption {
+  padding: 20px;
+}
+
+.sidebarOption:hover {
+  cursor: pointer;
+  background-color: rgb(235, 232, 232) !important;
+}
+
+#accountInfo {
+  background-color: rgb(235, 232, 232);
+}
+
+/* Account info + general stuff */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContentBlock {
+  padding: 20px 30px;
+  border-bottom: solid rgb(230, 220, 220) 1px;
+}
+
+h1 {
+  display: inline;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.editButton {
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: 10px;
+}
+
+.editButton:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.25em rgb(160, 158, 158));
+}
+
+form {
+  margin-top: 20px;
+  display: none;
+}
+
+.formContent > * {
+  margin: 0 10px;
+}
+
+.formContent > span {
+  display: inline-block;
+  width: max-content;
+}
+
+.submitButton {
+  border-radius: 5px;
+  padding: 3px;
+  background-color: rgb(232, 228, 228);
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  background-color: rgb(212, 208, 208);
+}
+
+/* Sensitive info */
+.sensitiveInfoBlock:hover {
+  cursor: pointer;
+  background-color: rgb(233, 229, 229);
+}
+
+#changePasswordForm, #deleteAccountForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+}
+
+#changePasswordForm > form, #deleteAccountForm > form {
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* Account deleted */
+#accountDeleted {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Past posts */
+.post {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.25em;
+}
+
+.description, .date {
+  font-size: 1em;
+  color: rgb(160, 148, 148);
+}
+
+.description {
+  margin-left: 10px;
+}
+
+.post:hover {
+  cursor: pointer;
+  background-color: rgb(233, 229, 229);
+}
+
+/* Travel log */
+#error {
+  color: red;
+}
+
+#entries {
+  display: flex;
+  flex-direction: column;
+}
+
+.travelLogBlock:hover {
+  cursor: pointer;
+  background-color: rgb(233, 229, 229);
+}
+
+.entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contents {
+  display: none;
+}
+
+.entryContent {
+  display: none;
+  padding: 0 5px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+#newEntryForm, #contents {
+  margin: 0 1%;
+  width: 100%;
+}
+
+.backButton {
+  width: 2.5em;
+  height: 2.5em;
+  display: block;
+}
+
+.backButton:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.25em rgb(160, 158, 158));
+}
+
+.entryFormLabel {
+  display: inline-block;
+  width: 7%;
+}
+
+.entryFormInput {
+  width: 90%;
+  max-width: 90%;
+  margin-bottom: 7px;
+}
+
+#content {
+  display: flex;
+  align-items: flex-start;
+}
+
+#entryContent {
+  resize: vertical;
+  min-height: 20px;
+}
+
+#newEntryError {
+  color: red;
+}
+
+.entryImage {
+  max-width: 100%;
+}
+
+.errorDiv {
+  color: red;
+  text-align: center;
+}
+
+.insideForm {
+  display: flex;
+}

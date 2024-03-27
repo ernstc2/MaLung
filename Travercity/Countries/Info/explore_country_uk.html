@@ -1,0 +1,103 @@
+<script>
+    let map;
+
+    function initMap() {
+        const lati = 54.8;
+        const longi = -4.6;
+        const mapOptions = {
+            center: { lat: lati, lng: longi },
+            zoom: 5,
+        };
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+
+    function goToLocation(latitude, longitude) {
+        const newCenter = new google.maps.LatLng(latitude, longitude);
+        map.setCenter(newCenter);
+        map.setZoom(15);
+    }
+
+    window.onload = initMap;
+    
+    function handleClick(element, lat, lng) {
+    document.querySelectorAll('.locations img').forEach(img => {
+        img.classList.remove('clicked');
+    });
+
+    element.classList.add('clicked');
+
+    goToLocation(lat, lng);
+}
+
+function goToLocation(latitude, longitude) {
+    const newCenter = new google.maps.LatLng(latitude, longitude);
+    map.setCenter(newCenter);
+    map.setZoom(15);
+}
+
+
+
+    
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+
+<section class="InformationBox">
+    <h2>About United Kingdom</h2>
+    <p><strong> The Wonders of the United Kingdom:</strong></p>
+    <p>
+        Britain, a country that blends ancient traditions 
+        with modern features, attracts tourists from all over
+         the world with its rich historical sites and charming
+          natural landscapes
+    </p>
+    <div class="container">
+        <div id="map"></div>
+        <div class="locations">
+            <img src="Info/img/Tower_Bridge.jpg" alt="Tower Bridge" onclick="goToLocation(51.5055, -0.0754)">
+            <img src="Info/img/Edinburgh_Castle.jpg" alt="Edinburgh Castle" onclick="goToLocation(55.9486, -3.1999)">
+            <img src="Info/img/Lake_District.jpg" alt="Lake District" onclick="goToLocation(54.4609, -3.0790)">
+        </div>
+        
+
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #map {
+        height: 600px;
+        width: 70%;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+
+    .locations img {
+        width: 60%;  
+        height: 30%; 
+        object-fit: cover; 
+        object-position: center; 
+        cursor: pointer;
+        transition: transform 0.2s ease; 
+        margin-left: 14%;
+    }
+
+    .locations img:active {
+        transform: scale(0.90); 
+    }
+
+
+
+
+</style>

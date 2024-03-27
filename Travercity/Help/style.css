@@ -1,0 +1,80 @@
+#body1 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    width: 60%;
+    margin: 0 auto; 
+}
+.left-box, .right-box {
+    width: 48%; 
+    margin-top: 50px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.left-box {
+    float: left;
+    margin-right: 2%; 
+}
+
+.right-box {
+    float: right;
+    margin-left: 2%; 
+}
+
+
+.collapsible-btn {
+    background-color: rgb(160, 160, 255); 
+    color: white; 
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    margin-bottom: 5px;
+}
+
+.collapsible-btn:hover, .collapsible-btn:focus {
+    background-color:  rgb(160, 160, 255); 
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 5px; 
+}
+
+.collapsible-btn:after {
+    content: '\002B'; 
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible-btn.active:after {
+    content: "\2212"; 
+}
+
+#help{
+
+    align-items: center;
+    margin-top: 70px;
+}
+

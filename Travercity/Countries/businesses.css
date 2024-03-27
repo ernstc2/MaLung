@@ -1,0 +1,16 @@
+.streetView {
+  height: 400px;
+}
+
+.yelpUrl {
+  float: right;
+}
+
+.yelpLogo {
+  max-height: 10px;
+}
+
+.businessImg {
+  width: initial;
+  max-height: 400px;;
+}

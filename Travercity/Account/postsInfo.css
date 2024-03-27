@@ -1,0 +1,9 @@
+/* This is for posts.php in the Account folder, rename the file and update posts.php stylesheet if name is confusing */
+
+#accountInfo {
+  background-color: white;
+}
+
+#posts {
+  background-color: rgb(235, 232, 232);
+}

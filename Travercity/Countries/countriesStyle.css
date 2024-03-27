@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: white;
+
+}
+
+
+/* ---------------------- Nicholas ---------------------- */
+
+form {
+    width: 100%;
+    height: max-content;
+    display: flex;
+}
+#searchBar {
+    width: 70%;
+    padding: 5px;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 20px;
+}
+#searchText {
+    margin-top: 35vh;
+    text-align: center;
+    font-size: 50px;
+}
+#ResultsOfSearch {
+    display: grid;
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+    margin: 5%;
+}
+#ResultsOfSearch img {
+    aspect-ratio: 1000/556;
+    width: 300px;
+    margin-right: 3%;
+    margin-left: auto;
+    margin-bottom: 3%;
+}
+#ResultsOfSearch a {
+    vertical-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+}
+#noCountryFound {
+    text-align: center;
+    width: 50%;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 50px auto;
+    background-color: red;
+    font-size: 25px;
+}
+
+
+#banner-image {
+    margin-top: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.InformationBox {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+.InformationBox h2 {
+    font-size: 24px;
+    color: #333;
+}
+.InformationBox img {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.InformationBox p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #666;
+    margin: 10px 0;
+}
+
+
+.InformationBox p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(160, 160, 255);
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 10px 13px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown {
+    padding: 8px 8px;
+}
+
+.dropbtn{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 3px;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.dropdown-right {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    overflow: hidden;
+    float: right;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: purple;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add style for the "Learn More" buttons */
+.learn-more {
+    margin-left: 70%;
+    width: 15%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Header/Blog Title */
+.header {
+    font-size: 40px;
+    text-align: center;
+    background-image: url('stluciaimg.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 30px;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+    margin-top: 00px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+.comments {
+    background-color: rgb(220, 220, 220);
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+
+#Create_Blog_Entry {
+    display: block;
+}
+#Create_Blog_Entry:before {
+    content: "";
+    display: block;
+}
+#Blog_Add {
+    background-color: rgb(160, 160, 255);
+    position: fixed;
+    right: 0;
+    width: 300px;
+    top: 10%;
+    border-radius: 25px;
+}
+#Create_Post_h3 {
+    text-align: center;
+}
+#forum_item_button {
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.forum_item {
+    background-color: rgb(200, 200, 255);
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+#short{
+    width:2.5%;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}

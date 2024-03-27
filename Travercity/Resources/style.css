@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins';
+}
+
+/* ----------------- navbar.php ----------------- */
+
+header {
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: max-content;
+  padding: 3px 0;
+  background-color: rgb(160, 160, 255);
+  --headerHeightReccomend: 40px;
+}
+
+#Header_navClicker {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  cursor: pointer;
+
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  height: var(--headerHeightReccomend);
+  width: auto;
+  padding: 2px 7px;
+}
+#Header_navClicker div {
+  min-height: 0px;
+  width: 100%;
+  flex: 1;
+  flex-grow: 1;
+  padding: 0;
+  border-bottom: 2px solid black;
+}
+#Header_navClicker div:nth-child(4) {
+  border-bottom: unset;
+}
+
+nav {
+  position: absolute;
+  background-color: rgb(160, 160, 255);
+  height: max-content;
+  width: max-content;
+  margin: 5px;
+  border-radius: 10px;
+  display: none;
+  line-height: 30px;
+  z-index: 100;
+}
+nav a {
+  padding: 10px 10px;
+  display: block;
+  position: relative;
+}
+nav a:hover {
+  background-color: purple;
+  color: white;
+}
+nav a:hover:nth-child(1) {
+  border-radius: 10px 10px 0 0;
+}
+nav a:hover:nth-last-child(1) {
+  border-radius: 0 0 10px 10px;
+}
+#Header_NavBar {
+  left: 0;
+  background-color: rgb(160, 160, 255);
+}
+#Header_NavBar_Account {
+  right: 0;
+  text-align: right;
+}
+
+#Header_OurNameAndLogo {
+  float: left;
+  display: flex;
+  height: var(--headerHeightReccomend);
+  width: max-content;
+  text-decoration: none;
+  color: initial;
+}
+#Header_OurNameAndLogo img {
+  box-sizing: border-box;
+  padding: 2px;
+  aspect-ratio: 1;
+  height: var(--headerHeightReccomend);
+  width: auto;
+}
+#Header_OurNameAndLogo h1 {
+  margin: auto 5px;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+#Header_OtherLinks {
+  margin-left: auto;
+  display: flex;
+  height: var(--headerHeightReccomend);
+  width: max-content;
+  align-items: center;
+}
+#Header_OtherLinks a {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#Header_OtherLinks img {
+  cursor: pointer;
+  box-sizing: border-box;
+  width: calc(var(--headerHeightReccomend) - 1px);
+  margin: 1px 10px;
+}
+
+/* ----------------- footer.php ----------------- */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: auto;
+
+  width: 100%;
+  height: max-content;
+  --footerHeightReccomend: 40px;
+  background-color: rgb(160, 160, 255);
+
+  font-size: 20px;
+}
+footer * {
+  margin: 0;
+  padding: 5px 5px;
+  flex: 1;
+}
+footer *:nth-child(1) { text-align: left; }
+footer *:nth-child(2) { text-align: center; }
+footer *:nth-child(3) { text-align: right; }
+/* Index.php */
+#index_background{
+  background-image: url('../Resources/Images/Rome.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#center-box{
+  margin-top: 180px;
+  margin-bottom: 180px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  border-radius: 10px 10px 0 0;
+
+}
+#Homepage-Welcome {
+  margin-top: 0cm;
+  margin-bottom: 0.25cm;
+  text-align: center;
+  font-size:1.25cm;
+  color: rgb(83, 78, 100)
+}
+#Homepage-Welcome-2 {
+  margin-bottom: 0.2cm;
+  text-align: center;
+  font-size:.75cm;
+  margin-top: 0;
+  color: rgb(6, 82, 196);
+}
+.Homepage-Text {
+  margin-bottom: 0.05cm;
+  color: black;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: larger;
+}
+
+
+#Signup {
+  font-size: x-large;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 4px #0056b3;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+#button-container {
+  text-align: center; 
+}
+
+
+#Signup:hover {
+  background-color: #0056b3;   
+  box-shadow: 0 2px #003d82;   
+}
+
+#Signup:active {
+  background-color: #004099;   
+  box-shadow: 0 1px #00264d;   
+}
+
+

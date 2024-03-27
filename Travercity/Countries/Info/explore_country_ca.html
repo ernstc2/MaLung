@@ -1,0 +1,104 @@
+<script>
+    let map;
+
+    function initMap() {
+        const lati = 56.1304;
+        const longi = -106.3468;
+        const mapOptions = {
+            center: { lat: lati, lng: longi },
+            zoom: 5,
+        };
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+
+    function goToLocation(latitude, longitude) {
+        const newCenter = new google.maps.LatLng(latitude, longitude);
+        map.setCenter(newCenter);
+        map.setZoom(15);
+    }
+
+    window.onload = initMap;
+    
+    function handleClick(element, lat, lng) {
+    document.querySelectorAll('.locations img').forEach(img => {
+        img.classList.remove('clicked');
+    });
+
+    element.classList.add('clicked');
+
+    goToLocation(lat, lng);
+}
+
+function goToLocation(latitude, longitude) {
+    const newCenter = new google.maps.LatLng(latitude, longitude);
+    map.setCenter(newCenter);
+    map.setZoom(15);
+}
+
+
+
+    
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBap6hHqVZtXGgmTgYXdUcYMtvucDmH7nY&callback=initMap"></script>
+
+<section class="InformationBox">
+    <h2>About Canada</h2>
+    <p><strong>Discover the Splendor of Canada</strong></p>
+    <p>
+        Canada is the world's second-largest by 
+        land area, boasting endless natural beauty and a rich cultural heritage. From
+         vast woodlands to spectacular mountain ranges, from vibrant cities to tranquil
+          countryside, Canada offers a unique and unforgettable experience for every 
+          visitor.
+    </p>
+    <div class="container">
+        <div id="map"></div>
+        <div class="locations">
+            <img src="Info/img/Niagara_Falls.jpg" alt="Niagara Falls" onclick="goToLocation(43.0896, -79.0849)">
+            <img src="Info/img/Banff_National_Park.jpg" alt="Banff National Park" onclick="goToLocation(51.4968, -115.9281)">
+            <img src="Info/img/CN_Tower.jpg" alt="CN Tower" onclick="goToLocation(43.6426, -79.3871)">
+        </div>
+        
+
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #map {
+        height: 600px;
+        width: 70%;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+
+    .locations img {
+        width: 60%;  
+        height: 30%; 
+        object-fit: cover; 
+        object-position: center; 
+        cursor: pointer;
+        transition: transform 0.2s ease; 
+        margin-left: 14%;
+    }
+
+    .locations img:active {
+        transform: scale(0.90); 
+    }
+
+
+
+
+</style>

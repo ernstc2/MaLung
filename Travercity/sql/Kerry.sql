@@ -1,0 +1,6 @@
+INSERT INTO WebSys.activities (country_id, activity_type, filename) VALUES(4, 'Explore Country', 'explore_country_fr')
+INSERT INTO `activities` (`ID`, `country_id`, `activity_type`, `filename`) VALUES (NULL, '6', 'Explore Country', 'explore_country_st');
+INSERT INTO `activities` (`ID`, `country_id`, `activity_type`, `filename`) VALUES (NULL, '3', 'Explore Country', 'explore_country_uk');
+INSERT INTO `activities` (`ID`, `country_id`, `activity_type`, `filename`) VALUES (NULL, '2', 'Explore Country', 'explore_country_ca');
+INSERT INTO `activities` (`ID`, `country_id`, `activity_type`, `filename`) VALUES (NULL, '1', 'Explore Country', 'explore_country_us');
+INSERT INTO `activities` (`ID`, `country_id`, `activity_type`, `filename`) VALUES (NULL, '5', 'Explore Country', 'explore_country_ge');
